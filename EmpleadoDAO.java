@@ -1,6 +1,3 @@
-package empleados;
-
-import Utilidades.Util;
 
 import java.util.*;
 

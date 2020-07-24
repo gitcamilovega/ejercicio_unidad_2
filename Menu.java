@@ -1,12 +1,8 @@
-package menu;
-
-import Utilidades.Util;
-import empleados.Captar;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu extends Captar {
+public class Menu extends OperacionesEmpleado {
     private static Scanner sc = new Scanner(System.in);
     private static int entrada;
 

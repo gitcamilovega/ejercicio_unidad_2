@@ -1,4 +1,4 @@
-package empleados;
+
 
 public interface ICaptar {
     void agregarEmpleado();

@@ -1,4 +1,4 @@
-package empleados;
+
 
 public interface IEmpleado {
     void agregar(Empleado empleado);
