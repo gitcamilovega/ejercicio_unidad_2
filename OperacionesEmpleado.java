@@ -8,13 +8,6 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
 
     public OperacionesEmpleado() {
         super();
-        empleadoDAO = new EmpleadoDAO();
-        empleadoDAO.agregar(new Empleado("1", "edinson", "Salamanca", (float) 41));
-        empleadoDAO.agregar(new Empleado("2", "leonardo", "Saravia", (float) 45));
-        empleadoDAO.agregar(new Empleado("3", "zoraida", "camargo", (float) 450000000));
-        empleadoDAO.agregar(new Empleado("4", "alicia", "camacho", (float) 450));
-        empleadoDAO.agregar(new Empleado("5", "aldemar", "sadoval", (float) 450));
-        empleadoDAO.agregar(new Empleado("6", "lucas", "sanabria", (float) 42));
     }
 
 
