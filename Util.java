@@ -31,6 +31,10 @@ public class Util {
         mesageEnterError();
     }
 
+    public static String getMayuscula(String cadena) {
+        return cadena.toUpperCase();
+    }
+
     public static void mostrarMensajeStandarError(String mensaje) {
         System.err.print(mensaje);
     }

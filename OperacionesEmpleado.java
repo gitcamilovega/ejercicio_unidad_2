@@ -31,19 +31,22 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
         Util.mostrarMensajeStandar("\nIngresar id\n->");
         String id = sc.nextLine().trim().substring(0, 1).toUpperCase();
         Util.mostrarMensajeStandar("\nIngresar nombre\n->");
-        String nombre = sc.nextLine().trim();
+        String nombre = Util.getMayuscula(sc.nextLine()).trim();
+
         Util.mostrarMensajeStandar("\nIngresar apellido\n->");
-        String apellido = sc.nextLine().trim();
+        String apellido = Util.getMayuscula(sc.nextLine());
+
         Float salario = ingresarSalario();
         sc.nextLine();
         return new Empleado(id, nombre, apellido, salario);
     }
 
-    private Empleado empleadoActualizado(String id) {
+    private Empleado empleadoParaActualizar(String id) {
         Util.mostrarMensajeStandar("\nIngresar nombre\n->");
-        String nombre = sc.nextLine().trim();
+        String nombre = Util.getMayuscula(sc.nextLine()).trim();
+
         Util.mostrarMensajeStandar("\nIngresar apellido\n->");
-        String apellido = sc.nextLine().trim();
+        String apellido = Util.getMayuscula(sc.nextLine()).trim();
         Float salario = ingresarSalario();
         sc.nextLine();
         return new Empleado(id, nombre, apellido, salario);
@@ -70,7 +73,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
         String id = sc.nextLine().trim();
         boolean empleado = empleadoDAO.existeId(id);
         if (empleado) {
-            empleadoDAO.actualizar(empleadoActualizado(id));
+            empleadoDAO.actualizar(empleadoParaActualizar(id));
         } else {
             Util.mostrarMensajeStandarError("Empleado con el id " + id + " no existe.");
             Util.mesageEnterError();
