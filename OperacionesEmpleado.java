@@ -139,10 +139,10 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     }
 
     @Override
-    public void totalApellidosPorS() {
+    public void totalApellidosPorA() {
         if (empleadoDAO.hayEmpleados()) {
-            Util.mostrarMensajePersonalizado("Total de empleados por la letra \'S\'");
-            Long total = empleadoDAO.getTotalEmpleadosPorS();
+            Util.mostrarMensajePersonalizado("Total Apellidos que empiezan por la letra \'A\'");
+            Long total = empleadoDAO.getTotalEmpleadosPorA();
             Util.mostrarMensajeStandar(String.format("Total =  %d\n", total));
             Util.mesageEnter();
         } else {

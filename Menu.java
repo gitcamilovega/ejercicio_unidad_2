@@ -85,7 +85,7 @@ public class Menu extends OperacionesEmpleado {
                 ver();
                 break;
             case 9:
-                totalApellidosPorS();
+                totalApellidosPorA();
                 ver();
                 break;
             case 10:

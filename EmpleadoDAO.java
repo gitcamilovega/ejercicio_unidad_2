@@ -88,12 +88,12 @@ public class EmpleadoDAO implements IEmpleado {
                 .reduce(Float::sum);
     }
 
-    public Long getTotalEmpleadosPorS() {
+    public Long getTotalEmpleadosPorA() {
         return empleados.stream()
                 .filter(empleado ->
                         empleado.getApellido()
                                 .toUpperCase()
-                                .startsWith("S")
+                                .startsWith("A")
                 )
                 .count();
     }
