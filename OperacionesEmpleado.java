@@ -55,6 +55,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     @Override
     public void eliminarEmpleado() {
         Util.mostrarMensajePersonalizado("Eliminar empleado");
+        empleadoDAO.mostrarTodos();
         Util.mostrarMensajeStandar("Ingresar id: ");
         String id = sc.nextLine();
         if (!empleadoDAO.existeId(id)) {
@@ -69,6 +70,8 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     @Override
     public void actualizarEmpleado() {
         Util.mostrarMensajePersonalizado("Actualizar empleado");
+        empleadoDAO.mostrarTodos();
+
         Util.mostrarMensajeStandar("\nIngresar id\n->");
         String id = sc.nextLine().trim();
         boolean empleado = empleadoDAO.existeId(id);
