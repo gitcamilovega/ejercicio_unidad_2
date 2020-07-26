@@ -85,11 +85,11 @@ public class Menu extends OperacionesEmpleado {
                 ver();
                 break;
             case 9:
-                getTotalEmpleadosPorS();
+                totalApellidosPorS();
                 ver();
                 break;
             case 10:
-                get5PrimerosConMayorSalario();
+                Primeros5ConMayorSalario();
                 ver();
                 break;
             case 0:

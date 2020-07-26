@@ -16,7 +16,7 @@ public interface IOperacionesEmpleado {
 
     void empleadosSalarioTotalSuma();
 
-    void getTotalEmpleadosPorS();
+    void totalApellidosPorS();
 
-    void get5PrimerosConMayorSalario();
+    void Primeros5ConMayorSalario();
 }

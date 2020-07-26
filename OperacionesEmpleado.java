@@ -134,7 +134,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     }
 
     @Override
-    public void getTotalEmpleadosPorS() {
+    public void totalApellidosPorS() {
         if (empleadoDAO.hayEmpleados()) {
             Util.mostrarMensajePersonalizado("Total de empleados por la letra \'S\'");
             Long total = empleadoDAO.getTotalEmpleadosPorS();
@@ -146,7 +146,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     }
 
     @Override
-    public void get5PrimerosConMayorSalario() {
+    public void Primeros5ConMayorSalario() {
         Util.mostrarMensajePersonalizado("Los 5 primeros empleados con mayor salario\t");
         if (empleadoDAO.hayEmpleados()) {
             empleadoDAO.get5PrimerosConMayorSalario()
