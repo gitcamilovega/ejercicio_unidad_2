@@ -110,10 +110,14 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
 
     @Override
     public void empleadosOrdenarPorNombres() {
-        Util.mostrarMensajePersonalizado("Empleados ordenados por nombre");
-        empleadoDAO.ordenarPorNombre();
-        empleadoDAO.mostrarTodos();
-        Util.mesageEnter();
+        if (empleadoDAO.hayEmpleados()) {
+            Util.mostrarMensajePersonalizado("Empleados ordenados por nombre");
+            empleadoDAO.ordenarPorNombre();
+            empleadoDAO.mostrarTodos();
+            Util.mesageEnter();
+        } else {
+            Util.mostrarMensajeNingunEmpleado();
+        }
     }
 
     @Override
