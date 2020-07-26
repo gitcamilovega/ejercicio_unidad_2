@@ -8,6 +8,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
 
     public OperacionesEmpleado() {
         super();
+        empleadoDAO = new EmpleadoDAO();
     }
 
 
