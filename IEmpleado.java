@@ -10,4 +10,6 @@ public interface IEmpleado {
     void mostrarTodos();
 
     boolean existeId(String id);
+
+
 }

@@ -1,5 +1,4 @@
 
-
 public interface IOperacionesEmpleado {
     void agregarEmpleado();
 
@@ -9,4 +8,15 @@ public interface IOperacionesEmpleado {
 
     void mostrarTodosEmpleados();
 
+    void empleadoMayorSalario();
+
+    void empleadoMenorSalario();
+
+    void empleadosOrdenarPorNombres();
+
+    void empleadosSalarioTotalSuma();
+
+    void getTotalEmpleadosPorS();
+
+    void get5PrimerosConMayorSalario();
 }

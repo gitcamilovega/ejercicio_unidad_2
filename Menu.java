@@ -11,13 +11,19 @@ public class Menu extends OperacionesEmpleado {
     }
 
     public void ver() {
-        System.out.println("----------Menú------------------");
-        System.out.println("1.Agregar empleado\t\t\t\t|");
-        System.out.println("2.Eliminar empleado\t\t\t\t|");
-        System.out.println("3.Actualizar empleado\t\t\t|");
-        System.out.println("4.Mostrar todos los empleados\t|");
-        System.out.println("5.Salir\t\t\t\t\t\t\t|");
-        System.out.println("--------------------------------");
+        System.out.println("----------Menú------------------------------------------");
+        System.out.println("1.Agregar empleado\t\t\t\t\t\t\t\t\t\t|");
+        System.out.println("2.Eliminar empleado\t\t\t\t\t\t\t\t\t\t|");
+        System.out.println("3.Actualizar empleado\t\t\t\t\t\t\t\t\t|");
+        System.out.println("4.Mostrar todos los empleados\t\t\t\t\t\t\t|");
+        System.out.println("5.Empleado con mayor salario\t\t\t\t\t\t\t|");
+        System.out.println("6.Empleado con menor salario\t\t\t\t\t\t\t|");
+        System.out.println("7.Ordenar empleados por nombres\t\t\t\t\t\t\t|");
+        System.out.println("8.Sumar todos los salarios, mayores a 700000\t\t\t|");
+        System.out.println("9.Total de empleados cuyo apellido comienza con A\t\t|");
+        System.out.println("10.Los 5 primeros empleados con mayor salario\t\t\t|");
+        System.out.println("0.Salir\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+        System.out.println("--------------------------------------------------------");
         captar();
     }
 
@@ -27,7 +33,7 @@ public class Menu extends OperacionesEmpleado {
             System.out.print("Ingresar valor: ");
             entrada = sc.nextInt();
             sc.nextLine();
-            if (entrada > 0 && entrada < 6) {
+            if (estaEnElRango(entrada)) {
                 opciones(entrada);
             } else {
                 throw new InputMismatchException();
@@ -35,10 +41,13 @@ public class Menu extends OperacionesEmpleado {
         } catch (InputMismatchException exception) {
             Util.mostrarMensajeStandarError("Solo números entre (1-5),presionar enter para continuar");
             Util.mesageEnterError();
-            Util.pausarEjecucion(sc);
             sc.nextLine();
             ver();
         }
+    }
+
+    private boolean estaEnElRango(int entrada) {
+        return entrada >= 0 && entrada <= 10;
     }
 
     private void opciones(int opcion) {
@@ -60,6 +69,30 @@ public class Menu extends OperacionesEmpleado {
                 ver();
                 break;
             case 5:
+                empleadoMayorSalario();
+                ver();
+                break;
+            case 6:
+                empleadoMenorSalario();
+                ver();
+                break;
+            case 7:
+                empleadosOrdenarPorNombres();
+                ver();
+                break;
+            case 8:
+                empleadosSalarioTotalSuma();
+                ver();
+                break;
+            case 9:
+                getTotalEmpleadosPorS();
+                ver();
+                break;
+            case 10:
+                get5PrimerosConMayorSalario();
+                ver();
+                break;
+            case 0:
                 System.exit(0);
                 break;
         }
