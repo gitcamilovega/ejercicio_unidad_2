@@ -27,7 +27,7 @@ public class Util {
     }
 
     public static void mostrarMensajeNingunEmpleado() {
-        mostrarMensajeStandar("¡Ningún empleado resgistrado!.");
+        mostrarMensajeStandarError("¡Ningún empleado resgistrado!.\n");
         mesageEnterError();
     }
 

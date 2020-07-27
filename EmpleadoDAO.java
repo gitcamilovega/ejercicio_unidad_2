@@ -43,16 +43,7 @@ public class EmpleadoDAO implements IEmpleado {
 
     @Override
     public void mostrarTodos() {
-        if (hayEmpleados()) {
-            empleados.stream()
-                    .forEach(empleado -> System.out.println(empleado.toString()));
-            Util.mesageEnter();
-
-        } else {
-            System.err.print("¡Ningún empleado resgistrado!.");
-            Util.mesageEnterError();
-
-        }
+        empleados.forEach(System.out::println);
     }
 
     @Override

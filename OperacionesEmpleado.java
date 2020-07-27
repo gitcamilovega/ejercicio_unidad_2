@@ -87,7 +87,12 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
     @Override
     public void mostrarTodosEmpleados() {
         Util.mostrarMensajePersonalizado("todos los empleados");
-        empleadoDAO.mostrarTodos();
+        if (empleadoDAO.hayEmpleados()) {
+            empleadoDAO.mostrarTodos();
+            Util.mesageEnter();
+        } else {
+            Util.mostrarMensajeNingunEmpleado();
+        }
     }
 
     @Override
@@ -107,8 +112,7 @@ public class OperacionesEmpleado implements IOperacionesEmpleado {
         Optional<Empleado> menorSalario = empleadoDAO.getEmpleadoMenorSalario();
         if (menorSalario.isPresent()) {
             Util.mostrarMensajePersonalizado("Empleado con el menor salario");
-            menorSalario.stream()
-                    .forEach(System.out::println);
+            Util.mostrarMensajeStandar(menorSalario.get().toString());
             Util.mesageEnter();
         } else {
             Util.mostrarMensajeNingunEmpleado();

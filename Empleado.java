@@ -51,6 +51,6 @@ public class Empleado {
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", salario=" + salario +
-                ']';
+                "]\n";
     }
 }
